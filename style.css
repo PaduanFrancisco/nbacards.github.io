@@ -1,0 +1,43 @@
+.card {
+    width: 100%;
+    max-width: 250px;
+    border: 1px solid salmon;
+    border-radius: 25px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: lightskyblue;
+    transition: transform 0.2s;
+}
+
+.card img {
+    width: 150px; 
+    height: 150px;
+    object-fit: contain; 
+    border-radius: 5px; 
+    background-color: salmon; 
+}
+
+
+#results {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+}
+
+.card {
+    flex: 0 0 calc(33.333% - 20px); 
+    box-sizing: border-box; 
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 0 0 calc(50% - 20px); /* Dos tarjetas en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 0 0 calc(100% - 20px); /* Una tarjeta en pantallas pequeñas */
+    }
+}
